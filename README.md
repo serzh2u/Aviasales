@@ -13,6 +13,7 @@ The framework consists of:
 ![][1]
 
 Learn more and complete integration with [Aviasales Android SDK Documentation](https://github.com/KosyanMedia/Aviasales-Android-SDK/wiki/Aviasales-Android-SDK-API-documentation).
+<br>To get your API key, track statistics and payments please sign up to [Travelpayouts Travel Affiliate Network](https://www.travelpayouts.com/?utm_source=github&utm_medium=android_sdk).
 <br>Learn more about earnings in [Travelpayouts FAQ](https://support.travelpayouts.com/hc/en-us/articles/203955613-Commission-and-payments).
 <br>Video [instruction] (https://www.youtube.com/watch?v=dQw4w9WgXcQ) 
 
