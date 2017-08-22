@@ -9,7 +9,7 @@ import com.appodeal.ads.Appodeal;
 
 import ru.aviasales.appodeallib.AppodealAds;
 import ru.aviasales.core.AviasalesSDK;
-import ru.aviasales.core.identification.IdentificationData;
+import ru.aviasales.core.identification.SdkSearchConfig;
 import ru.aviasales.template.ads.AdsImplKeeper;
 import ru.aviasales.template.ui.fragment.AviasalesFragment;
 
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 	private final static String TRAVEL_PAYOUTS_MARKER = "your_travel_payouts_marker";
 	private final static String TRAVEL_PAYOUTS_TOKEN = "your_travel_payouts_token";
 	private final static String APPODEAL_APP_KEY = "your_travel_appodeal_key";
+	private final static String SDK_HOST = "www.travel-api.pw";
 	private final static boolean SHOW_ADS_ON_START = true;
 	private final static boolean SHOW_ADS_ON_WAITING_SCREEN = true;
 	private final static boolean SHOW_ADS_ON_SEARCH_RESULTS = true;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		AviasalesSDK.getInstance().init(this, new IdentificationData(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN));
+		AviasalesSDK.getInstance().init(this, new SdkSearchConfig(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN, SDK_HOST));
 		setContentView(R.layout.activity_main);
 
 		init();

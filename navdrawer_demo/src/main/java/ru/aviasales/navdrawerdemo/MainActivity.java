@@ -13,9 +13,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import ru.aviasales.navdrawerdemo.fragment.EmptyFragment;
 import ru.aviasales.core.AviasalesSDK;
-import ru.aviasales.core.identification.IdentificationData;
+import ru.aviasales.core.identification.SdkSearchConfig;
+import ru.aviasales.navdrawerdemo.fragment.EmptyFragment;
 import ru.aviasales.template.ui.fragment.AviasalesFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity
 	// replace with your travel payout credentiials
 	private final static String TRAVEL_PAYOUTS_MARKER = "your_travel_payouts_marker";
 	private final static String TRAVEL_PAYOUTS_TOKEN = "your_travel_payouts_token";
+	private final static String SDK_HOST = "www.travel-api.pw";
 	private final static String APPODEAL_APP_KEY = "your_appodeal_app_key";
 
 	@Override
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity
 
 	private void init(Bundle savedInstanceState) {
 		if (savedInstanceState == null) {
-			AviasalesSDK.getInstance().init(this, new IdentificationData(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN));
+			AviasalesSDK.getInstance().init(this, new SdkSearchConfig(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN, SDK_HOST));
 			showAviasalesSdkFragment();
 		}
 	}
