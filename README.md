@@ -60,7 +60,7 @@ Before any interaction with Aviasales SDK or Aviasales Template you should initi
 
 Change `TRAVEL_PAYOUTS_MARKER` and `TRAVEL_PAYOUTS_TOKEN` to your marker and token params. You can get them at [Travelpayouts.com](https://www.travelpayouts.com/developers/api).
 
-`SDK_HOST` is a main endpoint of aviasales sdk. By default it can be set to `www.travel-api.pw`, but we strongly recommend to change it to your own [WhiteLabel host](https://support.travelpayouts.com/hc/en-us/categories/115000474487). 
+`SDK_HOST` is a main endpoint of Aviasales SDK. By default it can be set to `www.travel-api.pw`, but we strongly recommend to change it to your own [WhiteLabel host](https://support.travelpayouts.com/hc/en-us/categories/115000474487). 
 
 ## Example of adding Aviasales Template to your project 
 
