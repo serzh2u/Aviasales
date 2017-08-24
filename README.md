@@ -55,7 +55,7 @@ dependencies {
 
 Before any interaction with Aviasales SDK or Aviasales Template you should initialize it 
 ```java
-  		AviasalesSDK.getInstance().init(this, new SdkConfig(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN, SDK_HOST)); 
+  AviasalesSDK.getInstance().init(this, new SdkConfig(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN, SDK_HOST)); 
 ```
 
 Change `TRAVEL_PAYOUTS_MARKER` and `TRAVEL_PAYOUTS_TOKEN` to your marker and token params. You can find them at [Travelpayouts.com](https://www.travelpayouts.com/developers/api).
