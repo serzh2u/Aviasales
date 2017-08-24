@@ -19,7 +19,7 @@ public class AirlineLogoApi {
 			.build();
 
 	public void getAirlineLogo(final AirlineLogoParams params) {
-		String searchHost = AviasalesSDK.getInstance().getSearchHost();
+		String searchHost = AviasalesSDK.getInstance().getSdkHost();
 
 		if (searchHost == null) {
 			throw new NullPointerException("AviasalesSDK searchHost is null. Should be initialized before usage");
