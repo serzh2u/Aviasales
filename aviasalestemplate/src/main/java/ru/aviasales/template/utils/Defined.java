@@ -86,7 +86,7 @@ public class Defined extends CoreDefined {
 		CURRENCY_MAP = Collections.unmodifiableMap(aMap);
 	}
 
-	private static final String AIRLINE_LOGO_TEMPLATE_URL = "http://pics.avs.io/{Width}/{Height}/{IATA}.png";
+	private static final String AIRLINE_LOGO_TEMPLATE_URL = "https://{SearchUrl}/images/airline/{Width}/{Height}/{IATA}.png";
 
 	public static String getAirlineLogoTemplateUrl() {
 		return getUrl(AIRLINE_LOGO_TEMPLATE_URL);
