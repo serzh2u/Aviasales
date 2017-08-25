@@ -19,6 +19,10 @@ Learn more and complete integration with [Aviasales Android SDK Documentation](h
 
 More languages: [RUS] [Документация Aviasaels Android SDK](https://github.com/KosyanMedia/Aviasales-Android-SDK/wiki/О-SDK).
 
+## What's new in 2.1.9
+- `IdentificationData.java` is renamed to `SdkConfig.java`
+- In `IdentificationData` added `sdk-host` parameter. See Installation instructions for more info
+
 
 ## Installation
 
@@ -32,7 +36,7 @@ repositories {
 }
 
 dependencies {
-    compile 'ru.aviasales.template:aviasalesSdk:2.1.7-sdk'
+    compile 'ru.aviasales.template:aviasalesSdk:2.1.9-sdk'
 }
 ```
 
@@ -44,7 +48,7 @@ repositories {
 }
 
 dependencies {
-    compile 'ru.aviasales.template:aviasalesSdkTemplate:2.1.8'
+    compile 'ru.aviasales.template:aviasalesSdkTemplate:2.1.9'
 }
 ```
 
@@ -52,11 +56,12 @@ dependencies {
 
 Before any interaction with Aviasales SDK or Aviasales Template you should initialize it 
 ```java
-  		AviasalesSDK.getInstance().init(this, new IdentificationData(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN)); 
+  AviasalesSDK.getInstance().init(this, new SdkConfig(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN, SDK_HOST)); 
 ```
 
-Change `TRAVEL_PAYOUTS_MARKER` and `TRAVEL_PAYOUTS_TOKEN` to your marker and token params. You can get them at [Travelpayouts.com](https://www.travelpayouts.com/developers/api).
+Change `TRAVEL_PAYOUTS_MARKER` and `TRAVEL_PAYOUTS_TOKEN` to your marker and token params. You can find them at [Travelpayouts.com](https://www.travelpayouts.com/developers/api).
 
+`SDK_HOST` is a main endpoint of Aviasales SDK. You can set `www.travel-api.pw`as your default endpoint, but we strongly recommend to change it to your [WhiteLabel host](https://support.travelpayouts.com/hc/en-us/categories/115000474487). 
 
 ## Example of adding Aviasales Template to your project 
 
@@ -78,6 +83,7 @@ Add fragment to `MainActivity`
   	//Replace these variables on your TravelPayouts marker and token
   	private final static String TRAVEL_PAYOUTS_MARKER = "your_travel_payouts_marker";
 	private final static String TRAVEL_PAYOUTS_TOKEN = "your_travel_payouts_token";
+	private final static String SDK_HOST = "www.travel-api.pw";
   	private AviasalesFragment aviasalesFragment;
     ...
   
@@ -86,7 +92,7 @@ Add fragment to `MainActivity`
   		super.onCreate(savedInstanceState);
   
    		// Initialization of AviasalesSDK. 
-		AviasalesSDK.getInstance().init(this, new IdentificationData(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN));
+		AviasalesSDK.getInstance().init(this, new SdkParams(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN,SDK_HOST));
   		setContentView(R.layout.activity_main);
      
   		initFragment();
@@ -190,7 +196,7 @@ To add Appodeal Ads to your project just add additional maven dependency:
 
 ```gradle
 dependencies {
-    compile 'ru.aviasales.template:appodeallib:2.1.8'
+    compile 'ru.aviasales.template:appodeallib:2.1.9'
 }
 ```
 

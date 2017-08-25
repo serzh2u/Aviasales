@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import ru.aviasales.core.AviasalesSDK;
-import ru.aviasales.core.identification.IdentificationData;
+import ru.aviasales.core.identification.SdkConfig;
 import ru.aviasales.template.ui.fragment.AviasalesFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,13 +14,14 @@ public class MainActivity extends AppCompatActivity {
 	// replace with your travel payout credentials
 	private final static String TRAVEL_PAYOUTS_MARKER = "your_travel_payouts_marker";
 	private final static String TRAVEL_PAYOUTS_TOKEN = "your_travel_payouts_token";
+	private final static String SDK_HOST = "www.travel-api.pw";
 	private AviasalesFragment aviasalesFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		AviasalesSDK.getInstance().init(this, new IdentificationData(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN));
+		AviasalesSDK.getInstance().init(this, new SdkConfig(TRAVEL_PAYOUTS_MARKER, TRAVEL_PAYOUTS_TOKEN, SDK_HOST));
 		setContentView(R.layout.activity_main);
 
 		init();
