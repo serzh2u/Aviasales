@@ -18,7 +18,7 @@ Learn more and complete integration with [Aviasales Android SDK Documentation](h
 
 More languages: [RUS] [Документация Aviasaels Android SDK](https://github.com/KosyanMedia/Aviasales-Android-SDK/wiki/О-SDK).
 
-## What's new in 2.1.9
+## What's new
 - `IdentificationData.java` is renamed to `SdkConfig.java`
 - In `IdentificationData` added `sdk-host` parameter. See Installation instructions for more info
 
@@ -35,7 +35,7 @@ repositories {
 }
 
 dependencies {
-    compile 'ru.aviasales.template:aviasalesSdk:2.1.9-sdk'
+    compile 'ru.aviasales.template:aviasalesSdk:2.1.10-sdk'
 }
 ```
 
@@ -47,7 +47,7 @@ repositories {
 }
 
 dependencies {
-    compile 'ru.aviasales.template:aviasalesSdkTemplate:2.1.9'
+    compile 'ru.aviasales.template:aviasalesSdkTemplate:2.1.10'
 }
 ```
 
@@ -195,7 +195,7 @@ To add Appodeal Ads to your project just add additional maven dependency:
 
 ```gradle
 dependencies {
-    compile 'ru.aviasales.template:appodeallib:2.1.9'
+    compile 'ru.aviasales.template:appodeallib:2.1.10'
 }
 ```
 
